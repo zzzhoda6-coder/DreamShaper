@@ -4,7 +4,7 @@ import User from '../models/User.js';
 const API_URLS = {
   sdxl: "https://f2e3836091f5.ngrok-free.app/api/generate",
   Flux: "https://5607009ea47c.ngrok-free.app/api/generate",
-  pixart: "https://16c04af07c75.ngrok-free.app/api/generate",
+  pixart: "https://pixart.loca.lt/api/generate",
   Deliberate:"https://deliberate-v2.loca.lt/api/generate"
 };
 
