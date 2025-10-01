@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamShaper✨</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="chat-page">
+    <main class="chat-container">
+        <div class="chat-header">
+            <h2>DreamShaper✨</h2>
+            <div class="auth-buttons">
+                <div class="user-avatar" id="user-avatar" style="display: none;">
+                    <img src="https://via.placeholder.com/32" alt="User Avatar">
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <div id="user-email-dropdown"></div>
+                        <a href="#" id="logout-link">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="messages" id="messages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+
+        <div class="chat-input-container">
+            <div class="input-wrapper">
+                <form id="chat-form" action="generate" method="POST">
+                    <div class="input-area">
+                        <textarea id="chat-input" placeholder="Describe the image you want to generate..." rows="1"></textarea>
+
+                        <div class="input-actions">
+                            <div class="model-dropdown">
+                                <button type="button" class="model-select" id="modelSelect">
+                                    <i class="fas fa-magic"></i>
+                                    <span id="selectedModelText">SDXL 1.0</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="model-dropdown-content" id="modelDropdown">
+                                    <div class="model-option active" data-model="sdxl">
+                                        <div class="model-info">
+                                            <div class="model-name">SDXL 1.0</div>
+                                            <div class="model-desc">High quality, detailed images</div>
+                                        </div>
+                                        <i class="fas fa-check check-icon"></i>
+                                    </div>
+                                    <div class="model-option" data-model="pixart">
+                                        <div class="model-info">
+                                            <div class="model-name">PixArt-α</div>
+                                            <div class="model-desc">Fast generation, artistic style</div>
+                                        </div>
+                                        <i class="fas fa-check check-icon"></i>
+                                    </div>
+                                    <div class="model-option" data-model="Flux">
+                                        <div class="model-info">
+                                            <div class="model-name">Flux</div>
+                                            <div class="model-desc">Creative, colorful, and stylized outputs</div>
+                                        </div>
+                                        <i class="fas fa-check check-icon"></i>
+                                    </div>
+                                     <div class="model-option" data-model="Deliberate">
+                                        <div class="model-info">
+                                            <div class="model-name">Deliberate</div>
+                                            <div class="model-desc">Balanced model for realism and artistry</div>
+                                        </div>
+                                        <i class="fas fa-check check-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                <div class="loader"></div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
